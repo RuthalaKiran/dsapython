@@ -159,12 +159,33 @@ print(max_zeros_IIoptimal(arr))
 def unique(arr):
     count = Counter(arr)
     occurences = set()
-    
+
     for val in count.values():
         if val in occurences:
             return False
         occurences.add(val)
     return True
 
-arr = [1,2,2,1,1,3]
+
+arr = [1, 2, 2, 1, 1, 3]
 print(unique(arr))
+
+
+
+
+
+# contegious 2 sum and 3 sum 
+arr = [2,5,1,8,4,1,6,8,5,3,2]
+
+
+def suumm(arr):
+    n = len(arr)
+    maxsum = float("-inf")
+    for i in range(n - 2):
+        sum = arr[i] + arr[i + 1] + arr[i+2]
+        print(sum)
+        maxsum = max(maxsum, sum)
+    return maxsum
+
+
+print(suumm(arr))
